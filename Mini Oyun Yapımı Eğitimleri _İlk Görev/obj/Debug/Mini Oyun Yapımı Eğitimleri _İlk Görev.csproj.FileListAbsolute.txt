@@ -1,0 +1,8 @@
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\bin\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.exe.config
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\bin\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.exe
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\bin\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.pdb
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\obj\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.csproj.AssemblyReference.cache
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\obj\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.csproj.SuggestedBindingRedirects.cache
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\obj\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.csproj.CoreCompileInputs.cache
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\obj\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.exe
+C:\Users\fb_hl\source\repos\Mini Oyun Yapımı Eğitimleri _İlk Görev\Mini Oyun Yapımı Eğitimleri _İlk Görev\obj\Debug\Mini Oyun Yapımı Eğitimleri _İlk Görev.pdb
