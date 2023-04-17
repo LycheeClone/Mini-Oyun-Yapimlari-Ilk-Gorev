@@ -9,9 +9,9 @@ namespace Mini_Oyun_Yapımı_Eğitimleri__İlk_Görev
     {
         static void Main(string[] args)
         {
-            //Min();
-            //Max();
-            //Factoriel();
+            Min();
+            Max();
+            Factoriel();
             Sort();
         }
 
@@ -89,17 +89,18 @@ namespace Mini_Oyun_Yapımı_Eğitimleri__İlk_Görev
                 {
                     factorial *= i;
                 }
-                Console.WriteLine("\nGirdiğiniz Değerin Faktöriyeli:" + factorial + "\n" +
-                    "\nYeni Bir Hesaplama Yapmak için Y, Programdan Çıkmak İçin Enter Tuşuna Basınız\n");
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                if (keyInfo.KeyChar == 'y' || keyInfo.KeyChar == 'Y')
-                {
-                    Factoriel();
-                }
-                else
-                {
-                    Environment.Exit(0);
-                }
+                Console.WriteLine("\nGirdiğiniz Değerin Faktöriyeli:" + factorial);
+                 //   + "\n" +
+                //    "\nYeni Bir Hesaplama Yapmak için Y, Programdan Çıkmak İçin Enter Tuşuna Basınız\n");
+                //ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                //if (keyInfo.KeyChar == 'y' || keyInfo.KeyChar == 'Y')
+                //{
+                //    Factoriel();
+                //}
+                //else
+                //{
+                //    Environment.Exit(0);
+                //}
             }
             else
             {
@@ -110,141 +111,36 @@ namespace Mini_Oyun_Yapımı_Eğitimleri__İlk_Görev
 
         public static void Sort()
         {
-            Console.WriteLine("Sıralamak istediğiniz Değerleri Virgülle Ayırarak Giriniz\n");
-
+            Console.WriteLine("\nGirilen Değerleri Numerik Ve Alfabetik Sıralama Fonksiyonu\n  \nDeğerleri sıralamak için virgülle ayırarak girin:");
             string input = Console.ReadLine();
 
-            // Sayıları ve kelimeleri virgüllerden ayırarak diziye aktarır
             string[] values = input.Split(',');
-            int[] numbers = new int[values.Length];
-            string[] words = new string[values.Length];
-            int numCount = 0;
-            int wordCount = 0;
+
+            List<string> numbers = new List<string>();
+            List<string> words = new List<string>();
 
             foreach (string value in values)
             {
-                int num;
-                bool isNumber = int.TryParse(value.Trim(), out num);
-
-                if (isNumber)
+                if (int.TryParse(value.Trim(), out int num))
                 {
-                    numbers[numCount++] = num;
+                    numbers.Add(value.Trim());
                 }
                 else
                 {
-                    words[wordCount++] = value.Trim();
+                    words.Add(value.Trim());
                 }
             }
 
-            // Kelimeleri sıralar
-            Array.Sort(words);
+            numbers.Sort((a, b) => int.Parse(a).CompareTo(int.Parse(b)));
 
-            // Sayıları sıralar
-            Array.Sort(numbers);
+            words.Sort();
 
-            // Sıralanmış sayıları ve kelimeleri birleştirir
-            string[] sortedValues = new string[numbers.Length + words.Length];
-            int i = 0;
-            for (; i < numbers.Length; i++)
-            {
-                sortedValues[i] = numbers[i].ToString();
-            }
-            for (int j = 0; j < words.Length; j++)
-            {
-                sortedValues[i++] = words[j];
-            }
+            string sortedValues = string.Join(", ", numbers.Concat(words));
 
-            // Sıralanmış sayıları ve kelimeleri ekrana yazdırır
             Console.WriteLine("Sıralanmış değerler: ");
-            foreach (string value in sortedValues)
-            {
-                Console.Write("{0} ", value);
-            }
+            Console.WriteLine(sortedValues);
+
             Console.ReadLine();
-
-            //string input = Console.ReadLine();
-
-            //// Sayıları ve kelimeleri virgüllerden ayırarak listeye aktarır
-            //List<string> values = input.Split(',').ToList();
-
-            //// Sayıları ve kelimeleri ayrı ayrı sıralar
-            //List<string> numbers = values.Where(n => int.TryParse(n.Trim(), out int num)).OrderBy(n => int.Parse(n.Trim())).ToList();
-            //List<string> words = values.Where(n => !int.TryParse(n.Trim(), out int num)).OrderBy(n => n.Trim()).ToList();
-
-            //// Sayıları ve kelimeleri birleştirir
-            //string sortedValues = string.Join(", ", numbers.Concat(words));
-
-            //// Sıralanmış sayıları ve kelimeleri ekrana yazdırır
-            //Console.WriteLine("Sıralanmış değerler: ");
-            //Console.WriteLine(sortedValues);
-            //Console.ReadLine();
-
-
-            //string input = Console.ReadLine();
-
-            //// Sayıları ve kelimeleri virgüllerden ayırarak diziye aktarır
-            //string[] values = input.Split(',');
-            //int[] numbers = new int[values.Length];
-            //string[] words = new string[values.Length];
-            //int numCount = 0;
-            //int wordCount = 0;
-
-            //foreach (string value in values)
-            //{
-            //    int num;
-            //    bool isNumber = int.TryParse(value.Trim(), out num);
-
-            //    if (isNumber)
-            //    {
-            //        numbers[numCount++] = num;
-            //    }
-            //    else
-            //    {
-            //        words[wordCount++] = value.Trim();
-            //    }
-            //}
-
-            //// Sayıları ve kelimeleri ayrı ayrı sıralar
-            //Array.Sort(numbers);
-            //Array.Sort(words);
-
-            //// Sayıları ve kelimeleri birleştirir
-            //string[] sortedValues = new string[numbers.Length + words.Length];
-            //int i = 0;
-            //for (; i < numbers.Length; i++)
-            //{
-            //    sortedValues[i] = numbers[i].ToString();
-            //}
-            //for (int j = 0; j < words.Length; j++)
-            //{
-            //    sortedValues[i++] = words[j];
-            //}
-
-            //// Sıralanmış sayıları ve kelimeleri ekrana yazdırır
-            //Console.WriteLine("Sıralanmış değerler: ");
-            //foreach (string value in sortedValues)
-            //{
-            //    Console.Write("{0} ", value);
-            //}
-            //Console.ReadLine();
-
-
-            //string input = Console.ReadLine();
-            //string[] numberStrings = input.Split(',');
-            //int[] numbers = new int[numberStrings.Length];
-            //for (int i = 0; i < numberStrings.Length; i++)
-            //{
-            //    numbers[i] = int.Parse(numberStrings[i]);
-            //}
-
-            //Array.Sort(numbers);
-
-            //Console.WriteLine("\nSıralanmış sayılar: ");
-            //foreach (int number in numbers)
-            //{
-            //    Console.Write("{0} ", number);
-            //}
-            //Console.ReadLine();
         }
     }
 }
